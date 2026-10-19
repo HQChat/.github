@@ -1,0 +1,48 @@
+name: Bug report
+description: Something does not work as it should. Not for vulnerabilities.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A security problem goes in a [private advisory](https://github.com/HQChat/HQCHAT/security/advisories/new), not here.
+        Do not paste keys, tokens, addresses or message contents.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what you expected
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to reproduce it
+      placeholder: "1. …\n2. …"
+    validations:
+      required: true
+  - type: dropdown
+    id: component
+    attributes:
+      label: Where
+      options:
+        - macOS app
+        - iOS app
+        - Server or gateway
+        - Infrastructure or deploy
+        - Website
+        - Rust core
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: App version and OS, or the server commit.
+      placeholder: "3.0.0 on iOS 26.1"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Redact anything identifying first.
+      render: text

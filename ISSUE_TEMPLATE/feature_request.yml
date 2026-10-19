@@ -1,0 +1,20 @@
+name: Feature request
+description: Something HQChat should do and does not.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What you are trying to do
+      description: The need first, not the solution.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would help
+  - type: textarea
+    id: privacy
+    attributes:
+      label: What the server would learn
+      description: Anything this would expose beyond ciphertext, the friend graph, topic names, sizes and timing.
